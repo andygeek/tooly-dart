@@ -1,0 +1,43 @@
+# Tooly
+
+Tooly is a package in dart that contain utilities for working with lists, maps, sets and objects.
+
+## Method list
+
+### Compact
+
+Create a list without `null`, `false`, `0` and `''` from another list. 
+
+```dart
+Tooly.compact([0, 77, '', 55, false]);
+// [77, 55]
+```
+
+### Concat
+
+Create a list that contain the initial list and additional list.
+
+```dart
+Tooly.concat([1, 2, 3], [4, 5, 6]);
+// [1, 2, 3, 4, 5, 6]
+```
+
+### Uniq
+
+Create a list no duplicate elements from another list.
+
+```dart
+Tooly.uniq([1, 1, 1, 5, 5, 8]);
+// [1, 5, 8]
+```
+
+### listToString
+
+Create a string from a list.
+
+```dart
+Tooly.listToString(['first', 'second', 'third']);
+// first, second, third
+```
+
+Much more under construction...
