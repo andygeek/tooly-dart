@@ -1,12 +1,12 @@
 class Tooly {
 
   /// Create a list without `null`, `false`, `0` and `''` from another list. 
-  static List compact(List initList) {
+  static List compact(List list) {
     List listResult = [];
-    if (initList.isEmpty) {
+    if (list.isEmpty) {
       return listResult;
     }
-    for (var data in initList) {
+    for (var data in list) {
       if (data == null || data == false || data == "" || data == 0) {
       } else {
         listResult.add(data);
@@ -38,5 +38,15 @@ class Tooly {
       }
     }
     return strFinal;
+  }
+
+  /// Flattens list a single level deep.
+  static flatten(List list) {
+    for (var i = 0; i < list.length; i++) {      
+      if(list[i] is! List) {
+        list[i] = [list[i]];
+      }
+    }
+    return list.expand((element) => element).toList();
   }
 }

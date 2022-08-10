@@ -40,4 +40,13 @@ Tooly.listToString(['first', 'second', 'third']);
 // first, second, third
 ```
 
+### Flatten
+
+Flattens list a single level deep.
+
+```dart
+Tooly.flatten([1, 2, [3, 4], ['a', 'b']]);
+// [1, 2, 3, 4, a, b]
+```
+
 Much more under construction...
