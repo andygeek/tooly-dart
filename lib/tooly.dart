@@ -41,7 +41,7 @@ class Tooly {
   }
 
   /// Flattens list a single level deep.
-  static flatten(List list) {
+  static List flatten(List list) {
     for (var i = 0; i < list.length; i++) {      
       if(list[i] is! List) {
         list[i] = [list[i]];
@@ -51,7 +51,7 @@ class Tooly {
   }
 
   /// Create an list of elements split into groups the length of initial list size.
-  static chunk(List list, int size) {
+  static List chunk(List list, int size) {
     List result = [];
     List aux = [];
     for (var i = 0; i < list.length; i++) {

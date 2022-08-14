@@ -1,6 +1,6 @@
 # Tooly
 
-Tooly is a package in dart that contain utilities for working with lists, maps, sets and objects.
+Tooly is a package based in Lodash for Dart that contain utilities for working with lists, maps, sets and objects.
 
 ## Method list
 

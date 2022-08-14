@@ -1,3 +1,6 @@
+## 0.3.1
+- Added result type for `chunk` and `flatten` methods.
+
 ## 0.3.0
 - Added `chunk` method.
 
