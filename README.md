@@ -4,6 +4,15 @@ Tooly is a package in dart that contain utilities for working with lists, maps, 
 
 ## Method list
 
+### Chunk
+
+Create an list of elements split into groups the length of initial list size.
+
+```dart
+Tooly.chunk([1, 2, 3, 4, 5], 2);
+// [[1, 2], [3, 4], 5]
+```
+
 ### Compact
 
 Create a list without `null`, `false`, `0` and `''` from another list. 

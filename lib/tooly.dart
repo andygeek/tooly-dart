@@ -49,4 +49,23 @@ class Tooly {
     }
     return list.expand((element) => element).toList();
   }
+
+  /// Create an list of elements split into groups the length of initial list size.
+  static chunk(List list, int size) {
+    List result = [];
+    List aux = [];
+    for (var i = 0; i < list.length; i++) {
+      if ((i+1) % size == 0) {
+        aux.add(list[i]);
+        result.add([...aux]);
+        aux.clear();
+      } else {
+        aux.add(list[i]);
+      }
+    }
+    if(aux.isNotEmpty) {
+      result.addAll(aux);
+    }
+    return result;
+  }
 }
