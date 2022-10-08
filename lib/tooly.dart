@@ -1,4 +1,5 @@
 import 'package:collection/collection.dart';
+import 'package:tooly/utils.dart';
 
 class Tooly {
   /// Create a list without `null`, `false`, `0` and `''` from another list.
@@ -83,13 +84,23 @@ class Tooly {
     return result;
   }
 
-  /// Create a list with n elements dropped from the beginning.
+  /// Create a list with `n` elements dropped from the beginning.
   static List drop(List<dynamic> list, int n) {
     var length = list.length;
     if (length == 0 || n > length) {
       return [];
     } else {
       return list.slice(n < 0 ? 0 : n, length);
+    }
+  }
+
+  /// Fills elements of `list` with `value` from `start` up to, but not including `end`.
+  static List fill(List<dynamic> list, dynamic value, int start, int? end) {
+    var length = list.length;
+    if (length == 0) {
+      return [];
+    } else {
+      return baseFill(list, value, start, end);
     }
   }
 }

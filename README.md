@@ -65,6 +65,15 @@ Tooly.listToString(['first', 'second', 'third']);
 // first, second, third
 ```
 
+### Fill
+
+Fills elements of `list` with `value` from `start` up to, but not including `end`.
+
+```dart
+Tooly.fill([1, 2, 3, 4, 5], '*', 1, 3)
+// [1, *, *, 4, 5]
+```
+
 ### Flatten
 
 Flattens list a single level deep.

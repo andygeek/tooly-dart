@@ -1,3 +1,6 @@
+## 0.6.0
+- Added `fill` method.
+
 ## 0.5.0
 - Added `drop` method.
 
