@@ -1,3 +1,6 @@
+## 0.3.2
+- Change example structure.
+
 ## 0.3.1
 - Added result type for `chunk` and `flatten` methods.
 
