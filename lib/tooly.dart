@@ -1,8 +1,7 @@
 import 'package:collection/collection.dart';
 
 class Tooly {
-
-  /// Create a list without `null`, `false`, `0` and `''` from another list. 
+  /// Create a list without `null`, `false`, `0` and `''` from another list.
   static List compact(List list) {
     List listResult = [];
     if (list.isEmpty) {
@@ -33,7 +32,7 @@ class Tooly {
   static String listToString(List list) {
     String strFinal = '';
     for (var index = 0; index < list.length; index++) {
-      if(index < list.length - 1) {
+      if (index < list.length - 1) {
         strFinal = '$strFinal${list[index].toString()}, ';
       } else {
         strFinal = strFinal + list[index].toString();
@@ -44,8 +43,8 @@ class Tooly {
 
   /// Flattens list a single level deep.
   static List flatten(List list) {
-    for (var i = 0; i < list.length; i++) {      
-      if(list[i] is! List) {
+    for (var i = 0; i < list.length; i++) {
+      if (list[i] is! List) {
         list[i] = [list[i]];
       }
     }
@@ -57,7 +56,7 @@ class Tooly {
     List result = [];
     List aux = [];
     for (var i = 0; i < list.length; i++) {
-      if ((i+1) % size == 0) {
+      if ((i + 1) % size == 0) {
         aux.add(list[i]);
         result.add([...aux]);
         aux.clear();
@@ -65,7 +64,7 @@ class Tooly {
         aux.add(list[i]);
       }
     }
-    if(aux.isNotEmpty) {
+    if (aux.isNotEmpty) {
       result.addAll(aux);
     }
     return result;

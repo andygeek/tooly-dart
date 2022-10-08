@@ -1,3 +1,6 @@
+## 0.4.3
+- Added format for pass Static analysis.
+
 ## 0.4.2
 - Added example markdown.
 
