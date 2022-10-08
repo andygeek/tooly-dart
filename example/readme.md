@@ -1,4 +1,4 @@
-# Dart Example
+# Tooly example
 
 You can execute all examples using.
 

@@ -1,5 +1,8 @@
-## 0.3.2
+## 0.4.1
 - Change example structure.
+
+## 0.4.0
+- Added `difference` method.
 
 ## 0.3.1
 - Added result type for `chunk` and `flatten` methods.

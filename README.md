@@ -31,6 +31,14 @@ Tooly.concat([1, 2, 3], [4, 5, 6]);
 // [1, 2, 3, 4, 5, 6]
 ```
 
+### Difference
+
+Create a list of values that not include in the second list.
+```dart
+Tooly.difference([1, 2, 3], [3, 4, 5]);
+// [1, 2]
+```
+
 ### Uniq
 
 Create a list no duplicate elements from another list.

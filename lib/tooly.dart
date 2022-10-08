@@ -1,3 +1,5 @@
+import 'package:collection/collection.dart';
+
 class Tooly {
 
   /// Create a list without `null`, `false`, `0` and `''` from another list. 
@@ -65,6 +67,19 @@ class Tooly {
     }
     if(aux.isNotEmpty) {
       result.addAll(aux);
+    }
+    return result;
+  }
+
+  /// Create a list of values that not include in the second list.
+  static List difference(List<dynamic> fisrList, List<dynamic> secondList) {
+    List result = [];
+    for (var element in fisrList) {
+      dynamic searchElement = secondList.firstWhereOrNull((e) => element == e);
+
+      if (searchElement == null) {
+        result.add(element);
+      }
     }
     return result;
   }
