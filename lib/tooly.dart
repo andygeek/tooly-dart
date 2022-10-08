@@ -82,4 +82,14 @@ class Tooly {
     }
     return result;
   }
+
+  /// Create a list with n elements dropped from the beginning.
+  static List drop(List<dynamic> list, int n) {
+    var length = list.length;
+    if (length == 0 || n > length) {
+      return [];
+    } else {
+      return list.slice(n < 0 ? 0 : n, length);
+    }
+  }
 }

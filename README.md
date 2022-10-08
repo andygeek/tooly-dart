@@ -39,6 +39,14 @@ Tooly.difference([1, 2, 3], [3, 4, 5]);
 // [1, 2]
 ```
 
+### Drop
+
+Create a list with n elements dropped from the beginning.
+```dart
+Tooly.drop([1, 2, 3], 2);
+// [3]
+```
+
 ### Uniq
 
 Create a list no duplicate elements from another list.

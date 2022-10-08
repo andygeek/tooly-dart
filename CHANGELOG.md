@@ -1,3 +1,6 @@
+## 0.5.0
+- Added `drop` method.
+
 ## 0.4.3
 - Added format for pass Static analysis.
 
