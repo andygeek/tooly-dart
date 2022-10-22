@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:collection/collection.dart';
 import 'package:tooly/utils.dart';
 
@@ -102,5 +104,47 @@ class Tooly {
     } else {
       return baseFill(list, value, start, end);
     }
+  }
+
+  /// Find value index of list
+  static findIndex(List<dynamic> list, bool Function(dynamic e) predicate,
+      [int? fromIndex]) {
+    var length = list.length;
+    if (length == 0) {
+      return -1;
+    }
+    int index = fromIndex ?? 0;
+    if (index < 0) {
+      index = max(length + index, 0);
+    }
+    return baseFindIndex(list, predicate, index, false);
+  }
+
+  /// Find value index of list but it iterate over elements of list from right to left
+  static findLastIndex(List<dynamic> list, bool Function(dynamic e) predicate,
+      [int? fromIndex]) {
+    var length = list.length;
+    if (length == 0) {
+      return -1;
+    }
+    int index = length - 1;
+    if (fromIndex != null) {
+      index = fromIndex;
+      index = fromIndex < 0 ? max(length + index, 0) : min(index, length - 1);
+    }
+    return baseFindIndex(list, predicate, index, true);
+  }
+
+  /// Gets the first index of value in the list
+  static indexOf(List<dynamic> list, dynamic value, [int? fromIndex]) {
+    var length = list.length;
+    if (length == 0) {
+      return -1;
+    }
+    var index = fromIndex ?? 0;
+    if (index < 0) {
+      index = max(length + index, 0);
+    }
+    return strictIndexOf(list, value, fromIndex ?? 0);
   }
 }

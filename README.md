@@ -4,7 +4,7 @@ Tooly is a package based in Lodash for Dart that contain utilities for working w
 
 ## Method list
 
-### Chunk
+### chunk
 
 Create an list of elements split into groups the length of initial list size.
 
@@ -13,7 +13,7 @@ Tooly.chunk([1, 2, 3, 4, 5], 2);
 // [[1, 2], [3, 4], 5]
 ```
 
-### Compact
+### compact
 
 Create a list without `null`, `false`, `0` and `''` from another list. 
 
@@ -22,7 +22,7 @@ Tooly.compact([0, 77, '', 55, false]);
 // [77, 55]
 ```
 
-### Concat
+### concat
 
 Create a list that contain the initial list and additional list.
 
@@ -31,7 +31,7 @@ Tooly.concat([1, 2, 3], [4, 5, 6]);
 // [1, 2, 3, 4, 5, 6]
 ```
 
-### Difference
+### difference
 
 Create a list of values that not include in the second list.
 ```dart
@@ -39,7 +39,7 @@ Tooly.difference([1, 2, 3], [3, 4, 5]);
 // [1, 2]
 ```
 
-### Drop
+### drop
 
 Create a list with n elements dropped from the beginning.
 ```dart
@@ -47,7 +47,7 @@ Tooly.drop([1, 2, 3], 2);
 // [3]
 ```
 
-### Uniq
+### uniq
 
 Create a list no duplicate elements from another list.
 
@@ -65,7 +65,7 @@ Tooly.listToString(['first', 'second', 'third']);
 // first, second, third
 ```
 
-### Fill
+### fill
 
 Fills elements of `list` with `value` from `start` up to, but not including `end`.
 
@@ -74,7 +74,7 @@ Tooly.fill([1, 2, 3, 4, 5], '*', 1, 3)
 // [1, *, *, 4, 5]
 ```
 
-### Flatten
+### flatten
 
 Flattens list a single level deep.
 
@@ -82,5 +82,33 @@ Flattens list a single level deep.
 Tooly.flatten([1, 2, [3, 4], ['a', 'b']]);
 // [1, 2, 3, 4, a, b]
 ```
+
+### findIndex
+
+Find value index of list.
+
+```dart
+Tooly.findIndex([1, 2, 3], (e) => e == 2);
+// 1
+```
+
+### findLastIndex
+
+Find value index of list but it iterate over elements of list from right to left.
+
+```dart
+Tooly.findLastIndex([1, 2, 3], (e) => e == 2);
+// 1
+```
+
+### indexOf
+
+Gets the first index of value in the list.
+
+```dart
+Tooly.indexOf([1, 2, 3, 4], 4);
+// 3
+```
+
 
 Much more under construction...

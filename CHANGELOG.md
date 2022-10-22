@@ -1,3 +1,6 @@
+## 0.7.0
+- Added `findIndex`, `findLastIndex` and `indexOf` methods.
+
 ## 0.6.0
 - Added `fill` method.
 
