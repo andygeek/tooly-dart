@@ -1,3 +1,6 @@
+## 0.7.1
+Added homepage https://andygeek.github.io/tooly-website/
+
 ## 0.7.0
 - Added `findIndex`, `findLastIndex` and `indexOf` methods.
 
