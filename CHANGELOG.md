@@ -1,5 +1,8 @@
+## 0.7.2
+Change repository link to https://github.com/andygeek/tooly-dart
+
 ## 0.7.1
-Added homepage https://andygeek.github.io/tooly-website/
+Added homepage https://andygeek.github.io/tooly/
 
 ## 0.7.0
 - Added `findIndex`, `findLastIndex` and `indexOf` methods.
