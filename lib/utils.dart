@@ -1,39 +1,42 @@
-baseFill(List<dynamic> list, dynamic value, int start, int? end) {
-  var length = list.length;
+import 'dart:math';
+
+List<dynamic> baseFill(List<dynamic> list, dynamic value, int start, int? end) {
+  int length = list.length;
   if (start < 0) {
-    start = -start > length ? 0 : (length + start);
+    start = max(length + start, 0);
   }
   end = (end == null || end > length) ? 0 : end;
   if (end < 0) {
     end += length;
   }
-  end = start > end ? 0 : end;
-  while (start < end) {
-    list[start++] = value;
+  if (start > end) return list;
+  for (int i = start; i < end; i++) {
+    list[i] = value;
   }
   return list;
 }
 
-baseFindIndex(List<dynamic> array, bool Function(dynamic) predicate,
-    int fromIndex, bool fromRight) {
-  var length = array.length;
-  var index = fromIndex + (fromRight ? 1 : -1);
-  while (fromRight ? 0 < index-- : ++index < length) {
-    if (predicate(array[index])) {
-      return index;
+int baseFindIndex(
+  List<dynamic> array,
+  bool Function(dynamic) predicate,
+  int startIndex,
+  bool fromRight,
+) {
+  if (fromRight) {
+    for (int i = startIndex; i >= 0; i--) {
+      if (predicate(array[i])) return i;
+    }
+  } else {
+    for (int i = startIndex; i < array.length; i++) {
+      if (predicate(array[i])) return i;
     }
   }
   return -1;
 }
 
-strictIndexOf(List<dynamic> array, dynamic value, int fromIndex) {
-  var index = fromIndex - 1;
-  var length = array.length;
-
-  while (++index < length) {
-    if (array[index] == value) {
-      return index;
-    }
+int strictIndexOf(List<dynamic> array, dynamic value, int fromIndex) {
+  for (int i = fromIndex; i < array.length; i++) {
+    if (array[i] == value) return i;
   }
   return -1;
 }
