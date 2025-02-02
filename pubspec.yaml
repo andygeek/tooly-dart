@@ -1,6 +1,6 @@
 name: tooly
 description: Tooly is a package based in Lodash for Dart that contain utilities for working with lists, maps, sets and objects.
-version: 0.8.0
+version: 0.8.1
 repository: https://github.com/andygeek/tooly-dart
 homepage: https://andygeek.github.io/tooly/
 
@@ -11,5 +11,5 @@ dependencies:
   collection: ^1.16.0
 
 dev_dependencies:
-  lints: ^2.0.0
+  lints: ^5.1.1
   test: ^1.16.0

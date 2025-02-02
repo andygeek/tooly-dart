@@ -1,3 +1,14 @@
+### 0.8.1
+- **Added**:
+  - Full unit test coverage for all `Tooly` methods.  
+  - Performance improvements in `flattenDeep` and `listToString`.  
+
+- **Fixed**:
+  - Issues in `chunk`, `difference`, and `dropRight` edge cases.  
+
+- **Improved**:
+  - Code cleanup and minor optimizations.  
+
 ### 0.8.0
 
 - **New Features**:
