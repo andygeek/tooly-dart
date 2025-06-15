@@ -161,4 +161,39 @@ Tooly.takeRight([1, 2, 3, 4], 2);
 // [3, 4]
 ```
 
+### max
+Returns the maximum value of a numeric list.
+```dart
+Tooly.max([1, 2, 3]);
+// 3
+```
+
+### min
+Returns the minimum value of a numeric list.
+```dart
+Tooly.min([1, 2, 3]);
+// 1
+```
+
+### mean
+Returns the average value of a numeric list.
+```dart
+Tooly.mean([1, 2, 3]);
+// 2
+```
+
+### shuffle
+Returns a new list with the elements in random order.
+```dart
+Tooly.shuffle([1, 2, 3]);
+// e.g. [3, 1, 2]
+```
+
+### sample
+Returns a random element from the list.
+```dart
+Tooly.sample([1, 2, 3]);
+// e.g. 2
+```
+
 Much more under construction...

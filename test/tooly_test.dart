@@ -295,5 +295,42 @@ void main() {
       result = Tooly.sum([]);
       expect(result, equals(0));
     });
+
+    test('max: returns the maximum value of the list', () {
+      var list = [1, 5, 3];
+      expect(Tooly.max(list), equals(5));
+
+      expect(Tooly.max(<num>[]), isNull);
+    });
+
+    test('min: returns the minimum value of the list', () {
+      var list = [1, 5, -2];
+      expect(Tooly.min(list), equals(-2));
+
+      expect(Tooly.min(<num>[]), isNull);
+    });
+
+    test('mean: returns the average value of the list', () {
+      var list = [1, 2, 3, 4];
+      expect(Tooly.mean(list), equals(2.5));
+
+      expect(Tooly.mean([]), equals(0));
+    });
+
+    test('shuffle: returns a list with the same elements in different order', () {
+      var list = [1, 2, 3, 4];
+      var result = Tooly.shuffle(list);
+      expect(result.toSet(), equals(list.toSet()));
+      // Ensure new list is returned
+      expect(identical(result, list), isFalse);
+    });
+
+    test('sample: returns a random element from the list', () {
+      var list = [1, 2, 3];
+      var value = Tooly.sample(list);
+      expect(list.contains(value), isTrue);
+
+      expect(Tooly.sample(<int>[]), isNull);
+    });
   });
 }
