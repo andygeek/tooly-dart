@@ -156,4 +156,45 @@ class Tooly {
     }
     return total;
   }
+
+  static num? max(List<num> list) {
+    if (list.isEmpty) return null;
+    num maxValue = list.first;
+    for (final value in list.skip(1)) {
+      if (value > maxValue) maxValue = value;
+    }
+    return maxValue;
+  }
+
+  static num? min(List<num> list) {
+    if (list.isEmpty) return null;
+    num minValue = list.first;
+    for (final value in list.skip(1)) {
+      if (value < minValue) minValue = value;
+    }
+    return minValue;
+  }
+
+  static double mean(List<num> list) {
+    if (list.isEmpty) return 0;
+    return sum(list) / list.length;
+  }
+
+  static List<T> shuffle<T>(List<T> list) {
+    final random = Random();
+    final shuffled = List<T>.from(list);
+    for (var i = shuffled.length - 1; i > 0; i--) {
+      final j = random.nextInt(i + 1);
+      final tmp = shuffled[i];
+      shuffled[i] = shuffled[j];
+      shuffled[j] = tmp;
+    }
+    return shuffled;
+  }
+
+  static T? sample<T>(List<T> list) {
+    if (list.isEmpty) return null;
+    final random = Random();
+    return list[random.nextInt(list.length)];
+  }
 }
